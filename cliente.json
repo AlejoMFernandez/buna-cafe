@@ -1,0 +1,1030 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "buna-cafe",
+ "nombre": "Buna",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "",
+ "instagram": "bunacafe.ar",
+ "prefijoPedido": "BU",
+ "demoVersion": 1,
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo-oscuro.svg",
+  "logoPanel": "img/logo.svg",
+  "favicon": "img/favicon.png",
+  "logoClaro": "img/logo.svg",
+  "isotipo": "img/isotipo.svg",
+  "colores": {
+   "fondo": "#EEEDE9",
+   "superficie": "#FBFAF6",
+   "texto": "#1F2321",
+   "primario": "#2E6A5D",
+   "acento": "#87BBAC",
+   "borde": "#D5DAD6"
+  },
+  "fuentes": {
+   "titulos": "'Quicksand', sans-serif",
+   "texto": "'DM Sans', sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "pildora",
+   "sombra": "suave",
+   "borde": "1.5px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": false,
+  "admin": true,
+  "cartaQR": true,
+  "tienda": true
+ },
+ "horarios": {
+  "lun": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "mar": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "mie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "jue": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "vie": [
+   [
+    "08:00",
+    "20:00"
+   ]
+  ],
+  "sab": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ],
+  "dom": []
+ },
+ "sucursales": [
+  {
+   "id": "urquiza",
+   "nombre": "Villa Urquiza",
+   "direccion": "Av. Olazábal 5502",
+   "whatsapp": "",
+   "horarios": {
+    "lun": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "mar": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "mie": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "jue": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "vie": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "sab": [
+     [
+      "09:00",
+      "20:00"
+     ]
+    ],
+    "dom": []
+   }
+  },
+  {
+   "id": "martinez",
+   "nombre": "Martínez",
+   "direccion": "Vicente Fidel López 76",
+   "whatsapp": "",
+   "horarios": {
+    "lun": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "mar": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "mie": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "jue": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "vie": [
+     [
+      "08:00",
+      "20:00"
+     ]
+    ],
+    "sab": [
+     [
+      "09:00",
+      "20:00"
+     ]
+    ],
+    "dom": [
+     [
+      "15:30",
+      "19:30"
+     ]
+    ]
+   }
+  }
+ ],
+ "pedidos": {
+  "salidas": [
+   "mercadopago",
+   "efectivo"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "envio": 0,
+  "minimo": 0,
+  "sinPrecio": "a_confirmar",
+  "retiroHoy": {
+   "cadaMin": 15,
+   "prepMin": 10,
+   "asap": true
+  },
+  "encargo": {
+   "anticipacionHoras": 24,
+   "diasAdelante": 14,
+   "franjas": [
+    {
+     "id": "manana",
+     "nombre": "Mañana",
+     "desde": "09:00",
+     "hasta": "13:00"
+    },
+    {
+     "id": "tarde",
+     "nombre": "Tarde",
+     "desde": "15:30",
+     "hasta": "19:30"
+    }
+   ]
+  },
+  "casillas": [
+   {
+    "id": "vaso",
+    "label": "Traigo mi vaso",
+    "sub": "Avisanos y lo preparamos ahí"
+   }
+  ],
+  "aviso": "panel"
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  },
+  "efectivo": {
+   "porDia": {}
+  }
+ },
+ "textos": {
+  "tuPedido": "Tu pedido",
+  "verPedido": "Ver mi pedido",
+  "carritoVacio": "Todavía no sumaste nada.",
+  "carritoVacioSub": "Sumá tu café y algo del mostrador, y pasás a retirarlo.",
+  "enviarPedido": "Enviar pedido",
+  "pedidoListo": "¡Pedido enviado!",
+  "porEfectivoSubSin": "Pagás cuando pasás a retirarlo",
+  "avisoSinPrecio": "Algunos precios están a confirmar: Buna te avisa el precio final antes de prepararlo.",
+  "pedidoListoPanel": "Tu código es {codigo}. Buna ya lo tiene en su panel: pasá a retirarlo a la hora que elegiste.",
+  "rhCerrado": "Hoy ya cerramos: elegí la hora de retiro para el {dia}.",
+  "rhSinHorario": "No hay horarios de retiro disponibles en esta sede."
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "cafeteria",
+    "nombre": "Cafetería"
+   },
+   {
+    "id": "frios",
+    "nombre": "Fríos y de la casa"
+   },
+   {
+    "id": "bebidas",
+    "nombre": "Otras bebidas"
+   },
+   {
+    "id": "combos",
+    "nombre": "Combos Buna"
+   },
+   {
+    "id": "bolleria",
+    "nombre": "Bollería"
+   },
+   {
+    "id": "dulces",
+    "nombre": "Tortas y brownies"
+   },
+   {
+    "id": "budines",
+    "nombre": "Budines y alfajores"
+   },
+   {
+    "id": "salados",
+    "nombre": "Salados"
+   },
+   {
+    "id": "sintacc",
+    "nombre": "Sin TACC"
+   },
+   {
+    "id": "grano",
+    "nombre": "Café en grano",
+    "tienda": true,
+    "anticipacionHoras": 0
+   }
+  ],
+  "productos": [
+   {
+    "id": "espresso",
+    "categoria": "cafeteria",
+    "nombre": "Espresso",
+    "precio": 2000,
+    "descripcion": "Un shot de espresso, a temperatura barista.",
+    "foto": "img/p/p-espresso-600.webp",
+    "miniatura": "img/p/p-espresso-240.webp"
+   },
+   {
+    "id": "doppio",
+    "categoria": "cafeteria",
+    "nombre": "Doppio",
+    "precio": 2600,
+    "descripcion": "Dos shots de espresso.",
+    "foto": "img/p/p-doppio-600.webp",
+    "miniatura": "img/p/p-doppio-240.webp"
+   },
+   {
+    "id": "lungo",
+    "categoria": "cafeteria",
+    "nombre": "Lungo",
+    "precio": 2000,
+    "descripcion": "Agua y un shot de espresso."
+   },
+   {
+    "id": "americano",
+    "categoria": "cafeteria",
+    "nombre": "Americano",
+    "precio": 2200,
+    "descripcion": "Dos shots de espresso y agua."
+   },
+   {
+    "id": "cortado",
+    "categoria": "cafeteria",
+    "nombre": "Cortado",
+    "precio": 2400,
+    "descripcion": "Un shot de espresso y un poco de leche.",
+    "foto": "img/p/p-cortado-600.webp",
+    "miniatura": "img/p/p-cortado-240.webp"
+   },
+   {
+    "id": "magic",
+    "categoria": "cafeteria",
+    "nombre": "Magic",
+    "precio": 3100,
+    "descripcion": "Dos shots de espresso y leche.",
+    "foto": "img/p/p-magic-600.webp",
+    "miniatura": "img/p/p-magic-240.webp"
+   },
+   {
+    "id": "flat-white",
+    "categoria": "cafeteria",
+    "nombre": "Flat white",
+    "precio": 3100,
+    "descripcion": "Dos shots de espresso y leche sedosa.",
+    "foto": "img/p/p-flatwhite-600.webp",
+    "miniatura": "img/p/p-flatwhite-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "latte",
+    "categoria": "cafeteria",
+    "nombre": "Latte",
+    "precio": 2800,
+    "descripcion": "Uno o dos shots de espresso y leche.",
+    "foto": "img/p/p-latte-600.webp",
+    "miniatura": "img/p/p-latte-240.webp"
+   },
+   {
+    "id": "capuccino",
+    "categoria": "cafeteria",
+    "nombre": "Capuccino",
+    "precio": 2800,
+    "descripcion": "Espresso y leche espumada, con cacao o canela si querés.",
+    "foto": "img/p/p-capuccino-600.webp",
+    "miniatura": "img/p/p-capuccino-240.webp"
+   },
+   {
+    "id": "lagrima",
+    "categoria": "cafeteria",
+    "nombre": "Lágrima",
+    "precio": 2500,
+    "descripcion": "Un shot de espresso y leche.",
+    "foto": "img/p/p-lagrima-600.webp",
+    "miniatura": "img/p/p-lagrima-240.webp"
+   },
+   {
+    "id": "mocaccino",
+    "categoria": "cafeteria",
+    "nombre": "Mocaccino",
+    "precio": null,
+    "descripcion": "Dos shots de espresso, chocolate y leche."
+   },
+   {
+    "id": "latte-sabor",
+    "categoria": "cafeteria",
+    "nombre": "Caramel o vainilla",
+    "precio": null,
+    "descripcion": "Latte saborizado."
+   },
+   {
+    "id": "submarino",
+    "categoria": "cafeteria",
+    "nombre": "Submarino",
+    "precio": null,
+    "descripcion": "Tableta de chocolate y leche."
+   },
+   {
+    "id": "flat-white-frio",
+    "categoria": "frios",
+    "nombre": "Flat white frío",
+    "precio": null,
+    "descripcion": "El flat white de la casa, con hielo.",
+    "foto": "img/p/p-frio-600.webp",
+    "miniatura": "img/p/p-frio-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "gin-tonic-coffee",
+    "categoria": "frios",
+    "nombre": "Gin tonic coffee",
+    "precio": null,
+    "descripcion": "Espresso con tónica y hielo.",
+    "foto": "img/p/p-gintonic-600.webp",
+    "miniatura": "img/p/p-gintonic-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "cafe-lata",
+    "categoria": "frios",
+    "nombre": "Café frío en lata",
+    "precio": null,
+    "descripcion": "Latte, vainilla, caramel o mocaccino. Solo en Martínez.",
+    "foto": "img/p/p-lata-600.webp",
+    "miniatura": "img/p/p-lata-240.webp",
+    "etiquetas": [
+     "nuevo"
+    ],
+    "opciones": [
+     {
+      "id": "sabor",
+      "nombre": "Sabor",
+      "valores": [
+       {
+        "id": "latte",
+        "nombre": "Latte"
+       },
+       {
+        "id": "vainilla",
+        "nombre": "Vainilla"
+       },
+       {
+        "id": "caramel",
+        "nombre": "Caramel"
+       },
+       {
+        "id": "mocaccino",
+        "nombre": "Mocaccino"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "gaseosa",
+    "categoria": "bebidas",
+    "nombre": "Gaseosa",
+    "precio": 2000
+   },
+   {
+    "id": "agua",
+    "categoria": "bebidas",
+    "nombre": "Agua con o sin gas",
+    "precio": 1500
+   },
+   {
+    "id": "cerveza",
+    "categoria": "bebidas",
+    "nombre": "Cerveza",
+    "precio": 3000
+   },
+   {
+    "id": "vermut",
+    "categoria": "bebidas",
+    "nombre": "Vermut Primmo",
+    "precio": 4500
+   },
+   {
+    "id": "gin-tonic",
+    "categoria": "bebidas",
+    "nombre": "Gin tonic Summa",
+    "precio": 4500
+   },
+   {
+    "id": "combo-medialuna",
+    "categoria": "combos",
+    "nombre": "Café chico + medialuna",
+    "precio": 3500,
+    "descripcion": "Café a elegir con una medialuna.",
+    "foto": "img/p/p-combo-600.webp",
+    "miniatura": "img/p/p-combo-240.webp"
+   },
+   {
+    "id": "combo-palmerita",
+    "categoria": "combos",
+    "nombre": "Café + palmerita",
+    "precio": 3900,
+    "descripcion": "Café a elegir con una palmerita."
+   },
+   {
+    "id": "medialuna",
+    "categoria": "bolleria",
+    "nombre": "Medialuna",
+    "precio": 1000,
+    "descripcion": "De manteca."
+   },
+   {
+    "id": "croissant",
+    "categoria": "bolleria",
+    "nombre": "Croissant",
+    "precio": 3000,
+    "descripcion": "De hojaldre, recién horneado.",
+    "foto": "img/p/p-croissant-600.webp",
+    "miniatura": "img/p/p-croissant-240.webp"
+   },
+   {
+    "id": "palmerita",
+    "categoria": "bolleria",
+    "nombre": "Palmerita",
+    "precio": 1000,
+    "descripcion": "De hojaldre."
+   },
+   {
+    "id": "cookies",
+    "categoria": "bolleria",
+    "nombre": "Cookies (v)",
+    "precio": 2100,
+    "descripcion": "Veganas.",
+    "foto": "img/p/p-cookie-600.webp",
+    "miniatura": "img/p/p-cookie-240.webp",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "pain-au-chocolat",
+    "categoria": "bolleria",
+    "nombre": "Pain au chocolat",
+    "precio": 4100,
+    "descripcion": "Masa hojaldrada rellena de chocolate.",
+    "foto": "img/p/p-pain-600.webp",
+    "miniatura": "img/p/p-pain-240.webp"
+   },
+   {
+    "id": "cinnamon-roll",
+    "categoria": "bolleria",
+    "nombre": "Cinnamon roll",
+    "precio": 4100,
+    "descripcion": "Roll de canela, con glaseado si querés.",
+    "foto": "img/p/p-roll-600.webp",
+    "miniatura": "img/p/p-roll-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "medialuna-rellena",
+    "categoria": "bolleria",
+    "nombre": "Medialuna rellena",
+    "precio": 5200,
+    "descripcion": "Palta, lomito ahumado y queso dambo."
+   },
+   {
+    "id": "medialuna-jyq",
+    "categoria": "bolleria",
+    "nombre": "Medialuna lomo y queso",
+    "precio": 4300,
+    "descripcion": "Lomito ahumado y queso dambo."
+   },
+   {
+    "id": "croissant-relleno",
+    "categoria": "bolleria",
+    "nombre": "Croissant relleno",
+    "precio": 9000,
+    "descripcion": "Palta, brie y lomito ahumado."
+   },
+   {
+    "id": "croissant-veggie",
+    "categoria": "bolleria",
+    "nombre": "Croissant relleno veggie",
+    "precio": 8600,
+    "descripcion": "Palta, brie y tomate.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "croissant-jyq",
+    "categoria": "bolleria",
+    "nombre": "Croissant lomito y queso",
+    "precio": 7000,
+    "descripcion": "Lomito y queso dambo."
+   },
+   {
+    "id": "tostadas",
+    "categoria": "bolleria",
+    "nombre": "Tostadas",
+    "precio": 3700,
+    "descripcion": "Pan blanco o negro, con mermelada y queso crema o pasta de maní."
+   },
+   {
+    "id": "brownie",
+    "categoria": "dulces",
+    "nombre": "Brownie semiamargo",
+    "precio": 3400,
+    "descripcion": "Húmedo, con chips de chocolate.",
+    "foto": "img/p/p-brownie-600.webp",
+    "miniatura": "img/p/p-brownie-240.webp"
+   },
+   {
+    "id": "brownie-vegano",
+    "categoria": "dulces",
+    "nombre": "Brownie con nuez o maní (v)",
+    "precio": 4000,
+    "descripcion": "Vegano, con nuez o pasta de maní.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "lemonie",
+    "categoria": "dulces",
+    "nombre": "Lemonie",
+    "precio": 4600,
+    "descripcion": "El brownie de limón."
+   },
+   {
+    "id": "chocotorta",
+    "categoria": "dulces",
+    "nombre": "Chocotorta Buna",
+    "precio": 5500,
+    "descripcion": "Hecha con el café de la casa.",
+    "foto": "img/p/p-chocotorta-600.webp",
+    "miniatura": "img/p/p-chocotorta-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "tiramisu",
+    "categoria": "dulces",
+    "nombre": "Tiramisú Buna",
+    "precio": 4000,
+    "descripcion": "Con capas de café Buna y crema de mascarpone.",
+    "foto": "img/p/p-tiramisu-600.webp",
+    "miniatura": "img/p/p-tiramisu-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "torta-brownie",
+    "categoria": "dulces",
+    "nombre": "Torta brownie",
+    "precio": 7200,
+    "descripcion": "Base de brownie, dulce de leche y merengue.",
+    "foto": "img/p/p-tortabrownie-600.webp",
+    "miniatura": "img/p/p-tortabrownie-240.webp"
+   },
+   {
+    "id": "cheesecake",
+    "categoria": "dulces",
+    "nombre": "Cheesecake de frutos rojos",
+    "precio": 7600,
+    "descripcion": "Cremoso, con frutos rojos arriba.",
+    "foto": "img/p/p-cheesecake-600.webp",
+    "miniatura": "img/p/p-cheesecake-240.webp"
+   },
+   {
+    "id": "budin-limon",
+    "categoria": "budines",
+    "nombre": "Budín de limón y amapolas",
+    "precio": 3000,
+    "descripcion": "Porción.",
+    "foto": "img/p/p-budin-600.webp",
+    "miniatura": "img/p/p-budin-240.webp"
+   },
+   {
+    "id": "budin-mandarina",
+    "categoria": "budines",
+    "nombre": "Budín de mandarina",
+    "precio": 3000,
+    "descripcion": "Porción."
+   },
+   {
+    "id": "budin-marmolado",
+    "categoria": "budines",
+    "nombre": "Budín marmolado (v)",
+    "precio": 3700,
+    "descripcion": "Vegano, de vainilla y chocolate.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "budin-arandanos",
+    "categoria": "budines",
+    "nombre": "Budín de arándanos",
+    "precio": 4500,
+    "descripcion": "Porción."
+   },
+   {
+    "id": "budin-carrot",
+    "categoria": "budines",
+    "nombre": "Budín de carrot",
+    "precio": 5300,
+    "descripcion": "Porción."
+   },
+   {
+    "id": "alfajor-nuez",
+    "categoria": "budines",
+    "nombre": "Alfajor nuez y ddl (v)",
+    "precio": 3500,
+    "descripcion": "Vegano, con dulce de leche de almendras.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "alfajor-choco",
+    "categoria": "budines",
+    "nombre": "Alfajor chocolate y frutos rojos (v)",
+    "precio": 3500,
+    "descripcion": "Vegano, con corazón de frutos rojos.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "alfajor-mdp",
+    "categoria": "budines",
+    "nombre": "Alfajor Mar del Plata (v)",
+    "precio": 4400,
+    "descripcion": "Vegano, mousse de ddl de almendras y baño de chocolate.",
+    "foto": "img/p/p-alfajor-600.webp",
+    "miniatura": "img/p/p-alfajor-240.webp",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "alfajor-maicena",
+    "categoria": "budines",
+    "nombre": "Alfajor de maicena",
+    "precio": 2400,
+    "descripcion": "Con dulce de leche."
+   },
+   {
+    "id": "yogurt",
+    "categoria": "dulces",
+    "nombre": "Yogurt con frutas y granola",
+    "precio": 6600,
+    "descripcion": "Banana, frambuesas y granola crujiente."
+   },
+   {
+    "id": "ciabatta-mortadela",
+    "categoria": "salados",
+    "nombre": "Ciabatta mortadela y pistacho",
+    "precio": 6800,
+    "descripcion": "Mortadela con pistacho, brie y pesto.",
+    "foto": "img/p/p-ciabatta-600.webp",
+    "miniatura": "img/p/p-ciabatta-240.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "ciabatta-crudo",
+    "categoria": "salados",
+    "nombre": "Ciabatta crudo",
+    "precio": 10200,
+    "descripcion": "Jamón crudo, brie y rúcula."
+   },
+   {
+    "id": "prensado",
+    "categoria": "salados",
+    "nombre": "Prensado",
+    "precio": 6800,
+    "descripcion": "Lomito ahumado, dambo y tomate.",
+    "foto": "img/p/p-prensado-600.webp",
+    "miniatura": "img/p/p-prensado-240.webp"
+   },
+   {
+    "id": "prensado-capresse",
+    "categoria": "salados",
+    "nombre": "Prensado capresse",
+    "precio": 5700,
+    "descripcion": "Tomate, dambo y pesto.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "prensado-jyq",
+    "categoria": "salados",
+    "nombre": "Prensado lomito y queso",
+    "precio": 6100,
+    "descripcion": "Lomito ahumado y queso dambo.",
+    "foto": "img/p/p-baguettin-600.webp",
+    "miniatura": "img/p/p-baguettin-240.webp"
+   },
+   {
+    "id": "prensado-veggie",
+    "categoria": "salados",
+    "nombre": "Prensado veggie",
+    "precio": 7600,
+    "descripcion": "Dambo, brie y tomate.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "baguettin-crudo",
+    "categoria": "salados",
+    "nombre": "Baguettín crudo",
+    "precio": 7000,
+    "descripcion": "Jamón crudo y dambo."
+   },
+   {
+    "id": "baguettin-salame",
+    "categoria": "salados",
+    "nombre": "Baguettín salame",
+    "precio": 4600,
+    "descripcion": "Salame y dambo."
+   },
+   {
+    "id": "baguettin-lomito",
+    "categoria": "salados",
+    "nombre": "Baguettín lomito ahumado",
+    "precio": 5900,
+    "descripcion": "Lomito ahumado y dambo."
+   },
+   {
+    "id": "avocado-toast",
+    "categoria": "salados",
+    "nombre": "Avocado toast",
+    "precio": 6200,
+    "descripcion": "Palta, cherrys asados y feta en pan integral con semillas.",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "chipa",
+    "categoria": "salados",
+    "nombre": "Chipá",
+    "precio": 2200,
+    "descripcion": "Por unidad (dos por $4.000).",
+    "foto": "img/p/p-chipa-600.webp",
+    "miniatura": "img/p/p-chipa-240.webp"
+   },
+   {
+    "id": "chipa-xxl",
+    "categoria": "salados",
+    "nombre": "Chipá XXL",
+    "precio": 7500
+   },
+   {
+    "id": "chipa-xxl-relleno",
+    "categoria": "salados",
+    "nombre": "Chipá XXL relleno",
+    "precio": 11000
+   },
+   {
+    "id": "mini-lemonie",
+    "categoria": "sintacc",
+    "nombre": "Mini lemonie",
+    "precio": 4500,
+    "descripcion": "Sin TACC."
+   },
+   {
+    "id": "mini-brownie",
+    "categoria": "sintacc",
+    "nombre": "Mini brownie",
+    "precio": 7000,
+    "descripcion": "Sin TACC."
+   },
+   {
+    "id": "arabe",
+    "categoria": "sintacc",
+    "nombre": "Árabe de jamón y queso",
+    "precio": 12500,
+    "descripcion": "Sin TACC."
+   },
+   {
+    "id": "grano-bolivia",
+    "categoria": "grano",
+    "nombre": "Yanacachi · Bolivia",
+    "precio": null,
+    "descripcion": "Chocolate, malta, manzana roja y ciruela.",
+    "foto": "img/p/g-bolivia-600.webp",
+    "miniatura": "img/p/g-bolivia-300.webp",
+    "opciones": [
+     {
+      "id": "molienda",
+      "nombre": "Molienda",
+      "valores": [
+       {
+        "id": "grano",
+        "nombre": "En grano"
+       },
+       {
+        "id": "espresso",
+        "nombre": "Para espresso"
+       },
+       {
+        "id": "filtro",
+        "nombre": "Para filtro"
+       },
+       {
+        "id": "moka",
+        "nombre": "Para moka"
+       },
+       {
+        "id": "prensa",
+        "nombre": "Prensa francesa"
+       }
+      ]
+     }
+    ],
+    "origen": "Yanacachi",
+    "region": "Huila",
+    "altura": "1600/1800 m",
+    "varietal": "Caturra, Typica, Catuai",
+    "proceso": "Lavado",
+    "intensidad": 2
+   },
+   {
+    "id": "grano-honduras",
+    "categoria": "grano",
+    "nombre": "Opalaka · Honduras",
+    "precio": null,
+    "descripcion": "Chocolate con leche, caramelo, almendra y limón.",
+    "foto": "img/p/g-honduras-600.webp",
+    "miniatura": "img/p/g-honduras-300.webp",
+    "opciones": [
+     {
+      "id": "molienda",
+      "nombre": "Molienda",
+      "valores": [
+       {
+        "id": "grano",
+        "nombre": "En grano"
+       },
+       {
+        "id": "espresso",
+        "nombre": "Para espresso"
+       },
+       {
+        "id": "filtro",
+        "nombre": "Para filtro"
+       },
+       {
+        "id": "moka",
+        "nombre": "Para moka"
+       },
+       {
+        "id": "prensa",
+        "nombre": "Prensa francesa"
+       }
+      ]
+     }
+    ],
+    "origen": "Opalaka",
+    "region": "Huila",
+    "altura": "1500/1800 m",
+    "varietal": "Lempira",
+    "proceso": "Lavado",
+    "intensidad": 1
+   },
+   {
+    "id": "grano-colombia",
+    "categoria": "grano",
+    "nombre": "Colombia Supremo",
+    "precio": null,
+    "descripcion": "Afrutado, cítrico, miel y limón.",
+    "foto": "img/p/g-colombia-600.webp",
+    "miniatura": "img/p/g-colombia-300.webp",
+    "opciones": [
+     {
+      "id": "molienda",
+      "nombre": "Molienda",
+      "valores": [
+       {
+        "id": "grano",
+        "nombre": "En grano"
+       },
+       {
+        "id": "espresso",
+        "nombre": "Para espresso"
+       },
+       {
+        "id": "filtro",
+        "nombre": "Para filtro"
+       },
+       {
+        "id": "moka",
+        "nombre": "Para moka"
+       },
+       {
+        "id": "prensa",
+        "nombre": "Prensa francesa"
+       }
+      ]
+     }
+    ],
+    "origen": "Colombia",
+    "region": "Huila",
+    "altura": "1600/1800 m",
+    "varietal": "Caturra, Castillo Colombia",
+    "proceso": "Lavado",
+    "intensidad": 2
+   }
+  ]
+ },
+ "_fuentePrecios": "Precios: Rappi Villa Urquiza (pasados por Alejo el 13/11/2026); chipá, lemonie, budines de arándanos y carrot, medialuna lomo y queso y sin TACC: carta impresa sept 2025 (Google Maps); cafés y bebidas: carta impresa jul 2024 (Google Maps)."
+}

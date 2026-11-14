@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buna · Café de especialidad en Villa Urquiza y Martínez</title>
+<meta property="og:image" content="https://buna-cafe.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Buna · Pasá por tu cafecito. Dibujo de la fachada con el salón en el ventanal">
+<meta property="og:url" content="https://buna-cafe.vercel.app/">
+<meta property="og:title" content="Buna · Café de especialidad en Urquiza y Martínez">
+<meta property="og:description" content="La carta, el take away para pedir antes de llegar y el café en grano.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Buna">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://buna-cafe.vercel.app/img/og.jpg?v=1">
+<meta name="description" content="Buna, café de especialidad en Villa Urquiza y Martínez. La carta con precios, take away para pedir antes de llegar y café en grano.">
+<meta name="theme-color" content="#EEEDE9">
+<link rel="icon" href="img/favicon.png">
+<link rel="preload" href="fonts/quicksand-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  (function(){
+    var d=document.documentElement;
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches && !/sinintro/.test(location.search)) d.classList.add('con-intro');
+  })();
+</script>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="css/fuentes.css?v=1">
+<link rel="stylesheet" href="kit/kit.css?v=1">
+<link rel="stylesheet" href="css/buna.css?v=17">
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <div class="intro-centro">
+    <svg class="intro-grano" viewBox="580 334 280 418"><use href="#grano"/></svg>
+    <div class="intro-letras"><span>B</span><span>U</span><span>N</span><span>A</span></div>
+    <p class="intro-sub">café de especialidad</p>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><clipPath id="mascaraGrano" clipPathUnits="objectBoundingBox"><path id="granoClip" d=""/></clipPath></defs>
+</svg>
+
+<nav class="nav-granos" aria-label="Secciones">
+  <a href="#inicio"><i></i><span>Inicio</span></a>
+  <a href="#tarjeta"><i></i><span>La tarjeta</span></a>
+  <a href="#carta"><i></i><span>La vidriera</span></a>
+  <a href="#grano"><i></i><span>Café en grano</span></a>
+  <a href="#barrio"><i></i><span>El barrio</span></a>
+  <a href="#locales"><i></i><span>Los dos Buna</span></a>
+</nav>
+<button class="pedido-pill" type="button" data-kit-open="carrito" data-kit-target aria-label="Ver tu pedido"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Tu pedido<b data-n>0</b></button>
+<nav class="nav-app" aria-label="Accesos">
+  <a href="#carta">Carta</a>
+  <a href="#tarjeta">Tarjeta</a>
+  <a href="#locales">Locales</a>
+  <a href="admin/">Panel</a>
+  <button type="button" class="nav-app-pedir" data-kit-open="carrito" data-kit-target>Pedido<b data-n>0</b></button>
+</nav>
+
+<main id="inicio">
+
+  <!-- HERO · ventana al local -->
+  <section class="hA" data-hero aria-labelledby="hA-t">
+    <div class="hA-fijo">
+      <header class="hA-top">
+        <p class="kicker"><span class="k-largo">Café de especialidad · </span>Villa Urquiza · Martínez</p>
+        <h1 id="hA-t" class="hA-titulo"><span class="ml"><span>Pasá por tu</span></span> <span class="ml"><span>cafecito.</span></span></h1>
+      </header>
+      <div class="hA-escena" data-escena>
+        <div class="hA-dibujo">
+          <img class="hA-fachada" src="img/fachada-a-900.webp" srcset="img/fachada-a-900.webp 900w, img/fachada-a-1260.webp 1260w" sizes="(min-width: 900px) 70vw, 170vw" width="1260" height="770" alt="Dibujo de la fachada de Buna con su ventanal y la ventana de take away" fetchpriority="high">
+          <div class="hA-ventana" data-ventana>
+            <img src="img/salon-520.webp" fetchpriority="high" decoding="async" data-grande="img/salon-800.webp 800w, img/salon-1400.webp 1400w" width="1440" height="1920" alt="El salón de Buna lleno de gente">
+            <i class="hA-reja" aria-hidden="true"></i>
+            <svg class="hA-grano" data-intro-target viewBox="580 334 280 418" aria-hidden="true"><use href="#grano"/></svg>
+          </div>
+          <a class="hA-takeaway" href="#carta" aria-label="Pedí take away: ir a la carta">
+            <span class="nota">¡por acá sale<br>tu take away!</span>
+            <svg class="flecha" viewBox="0 0 120 80" aria-hidden="true"><path d="M8 14 C 50 4, 96 20, 104 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M92 54 L104 66 L112 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hA-acciones">
+        <a class="btn-sello" href="#carta"><span>Pedí<br>take away</span></a>
+        <a class="link-trazo" href="#locales">Los dos Buna<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 40 2, 80 11, 120 6 S 180 3, 198 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WOW · la tarjeta Buna -->
+  <section class="tarjeta-sec" id="tarjeta" aria-labelledby="t-t">
+    <header class="sec-cabeza sellable">
+      <p class="kicker">La tarjeta Buna</p>
+      <h2 id="t-t">Sellá tu café</h2>
+      <p class="sec-bajada">Tocá un círculo, se estampa el grano y te contamos qué lleva. La tarjeta de verdad te espera en el mostrador: <span class="manuscrita">¡al décimo, café gratis!</span></p>
+    </header>
+    <div class="tarjeta" data-tarjeta>
+      <div class="t-cabeza">
+        <svg class="t-mini" viewBox="580 334 280 418" aria-hidden="true"><use href="#grano"/></svg>
+        <div><p class="t-marca">BUNA</p><p class="t-sub">café de especialidad</p></div>
+        <p class="t-cuenta" aria-live="polite"><b data-cuenta>0</b>/9 sellos</p>
+      </div>
+      <div class="t-grilla" data-grilla role="list"></div>
+      <div class="t-ficha" data-ficha aria-live="polite">
+        <div class="t-ficha-vacia" data-vacia>
+          <span class="manuscrita">elegí tu café</span>
+          <svg viewBox="0 0 120 80" aria-hidden="true"><path d="M110 10 C 70 6, 26 24, 18 66" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M8 52 L17 68 L30 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <figure class="t-foto"><img data-f-img alt="" width="600" height="600" loading="lazy"></figure>
+        <div class="t-info">
+          <p class="t-nombre" data-f-nombre></p>
+          <p class="t-desc" data-f-desc></p>
+          <div class="t-pie">
+            <p class="t-precio" data-f-precio></p>
+            <button class="btn-sumar" type="button" data-sumar>Sumar</button>
+          </div>
+        </div>
+      </div>
+      <div class="t-premio" data-premio hidden>
+        <p class="manuscrita">¡Llegaste al café gratis!</p>
+        <p>En el mostrador funciona igual: cada café suma un sello.</p>
+        <button type="button" class="link-trazo" data-reiniciar>Empezar otra tarjeta<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 40 2, 80 11, 120 6 S 180 3, 198 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA VIDRIERA · la carta completa -->
+  <section class="vidriera-sec" id="carta" aria-labelledby="v-t">
+    <header class="sec-cabeza sellable">
+      <p class="kicker">La carta</p>
+      <h2 id="v-t">La vidriera</h2>
+      <p class="sec-bajada">Todo lo del mostrador, con precio. Sumá con <b class="mas">+</b>, elegí Urquiza o Martínez y <span class="manuscrita">pasás a retirarlo.</span></p>
+    </header>
+    <div class="vid-tabs" role="tablist" aria-label="Partes de la vidriera">
+      <button role="tab" class="vid-tab on" aria-selected="true" data-h="0">Café y bollería</button>
+      <button role="tab" class="vid-tab" aria-selected="false" data-h="1">Dulce y salado</button>
+    </div>
+    <div class="vidriera sellable" data-hojas></div>
+    <div class="vid-chips" role="tablist" aria-label="Secciones de la carta" data-chips></div>
+    <div class="vid-celu" data-celu></div>
+    <p class="vid-pie">Precios de la carta del local. Los marcados <em>a confirmar</em> se suman igual: Buna te confirma el precio cuando prepara el pedido. <a href="carta/">Ver la carta del QR</a></p>
+    <div data-kit="carta" id="carta-datos" data-kit-pedir="false" hidden></div>
+  </section>
+
+  <!-- CAFÉ EN GRANO -->
+  <section class="grano-sec" id="grano" aria-labelledby="g-t">
+    <header class="sec-cabeza sellable">
+      <p class="kicker">Para tu casa</p>
+      <h2 id="g-t">Café en grano</h2>
+      <p class="sec-bajada">Los mismos granos de la barra, molidos como los uses. Encargalos y los retirás en cualquiera de los dos Buna.</p>
+    </header>
+    <div class="estante" data-estante></div>
+    <div data-kit="carta" id="grano-datos" data-kit-tienda="true" data-kit-pedir="false" hidden></div>
+  </section>
+
+  <!-- EL BARRIO EN BUNA -->
+  <section class="barrio-sec" id="barrio" aria-labelledby="b-t">
+    <div class="barrio-mural sellable">
+      <p class="kicker">Por qué Buna</p>
+      <h2 id="b-t">Un momento de encuentro en comunidad</h2>
+      <p>La ceremonia del café conocida como “buna” nace en Etiopía: un rato para compartir y charlar tranquilos, con todo el proceso del café, del tueste a la taza.</p>
+      <button type="button" class="btn-sello btn-sello--claro" data-abrir-feria><span>Sumate a<br>la feria</span></button>
+    </div>
+    <div class="mosaico" data-mosaico>
+      <figure class="m1"><img src="img/b-amigas-480.webp" srcset="img/b-amigas-480.webp 480w, img/b-amigas-800.webp 800w" sizes="(min-width: 900px) 34vw, 100vw" width="1280" height="1706" alt="Amigas tomando café en Buna" loading="lazy"></figure>
+      <figure class="m2"><img src="img/b-cafe-480.webp" srcset="img/b-cafe-480.webp 480w, img/b-cafe-800.webp 800w" sizes="(min-width: 900px) 22vw, 46vw" width="1280" height="1706" alt="Una clienta tomando un espresso" loading="lazy"></figure>
+      <figure class="m3"><img src="img/b-aniversario-480.webp" srcset="img/b-aniversario-480.webp 480w, img/b-aniversario-800.webp 800w" sizes="(min-width: 900px) 22vw, 46vw" width="1365" height="1706" alt="El primer aniversario de Buna" loading="lazy"></figure>
+      <figure class="m4"><img src="img/b-charla-480.webp" srcset="img/b-charla-480.webp 480w, img/b-charla-800.webp 800w" sizes="(min-width: 900px) 22vw, 46vw" width="3136" height="5570" alt="El barista sirviendo leche en una taza de cerámica" loading="lazy"></figure>
+      <figure class="m5"><img src="img/b-takeaway-480.webp" srcset="img/b-takeaway-480.webp 480w, img/b-takeaway-800.webp 800w" sizes="(min-width: 900px) 22vw, 46vw" width="1365" height="1706" alt="Un café para llevar de Buna" loading="lazy"></figure>
+      <figure class="m6"><img src="img/b-mesa-480.webp" srcset="img/b-mesa-480.webp 480w, img/b-mesa-800.webp 800w" sizes="(min-width: 900px) 22vw, 46vw" width="1365" height="1705" alt="Un cliente con su café y un croissant" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- LOS DOS BUNA -->
+  <section class="locales-sec" id="locales" aria-labelledby="l-t">
+    <header class="sec-cabeza sellable">
+      <p class="kicker">Dónde estamos</p>
+      <h2 id="l-t">Los dos Buna</h2>
+    </header>
+    <div class="locales">
+      <div class="mapa" data-mapa role="img" aria-label="Mapa con los dos Buna: Villa Urquiza y Martínez"></div>
+      <div class="sedes">
+        <article class="sede" data-sede="urquiza">
+          <p class="sede-estado" data-estado></p>
+          <h3>Villa Urquiza</h3>
+          <p class="sede-dir">Av. Olazábal 5502</p>
+          <dl class="horas"><div><dt>Lunes a viernes</dt><dd>8:00 a 20:00 hs</dd></div><div><dt>Sábados</dt><dd>9:00 a 20:00 hs</dd></div><div><dt>Domingos</dt><dd>Cerrado</dd></div></dl>
+          <div class="sede-acc"><button type="button" class="btn-chico" data-kit-sucursal="urquiza" data-ir-carta>Retirar acá</button><button type="button" class="sede-ver" data-ver="urquiza">Ver en el mapa</button><a class="link-trazo" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20Olaz%C3%A1bal%205502%2C%20CABA" target="_blank" rel="noopener">Cómo llegar<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 40 2, 80 11, 120 6 S 180 3, 198 7"/></svg></a></div>
+        </article>
+        <article class="sede" data-sede="martinez">
+          <p class="sede-estado" data-estado></p>
+          <h3>Martínez</h3>
+          <p class="sede-dir">Vicente Fidel López 76</p>
+          <dl class="horas"><div><dt>Lunes a viernes</dt><dd>8:00 a 20:00 hs</dd></div><div><dt>Sábados</dt><dd>9:00 a 20:00 hs</dd></div><div><dt>Domingos</dt><dd>15:30 a 19:30 hs</dd></div></dl>
+          <div class="sede-acc"><button type="button" class="btn-chico" data-kit-sucursal="martinez" data-ir-carta>Retirar acá</button><button type="button" class="sede-ver" data-ver="martinez">Ver en el mapa</button><a class="link-trazo" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vicente%20Fidel%20L%C3%B3pez%2076%2C%20Mart%C3%ADnez" target="_blank" rel="noopener">Cómo llegar<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 40 2, 80 11, 120 6 S 180 3, 198 7"/></svg></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <svg class="pie-grano" viewBox="580 334 280 418" aria-hidden="true"><use href="#grano"/></svg>
+  <p class="pie-marca">BUNA</p>
+  <p>El buen café · Av. Olazábal 5502, Villa Urquiza · Vicente Fidel López 76, Martínez</p>
+  <p><a href="https://www.instagram.com/bunacafe.ar/" target="_blank" rel="noopener">@bunacafe.ar</a> · <a href="carta/">Carta del QR</a></p>
+  <p class="credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<!-- popup: inscripción a la feria (reemplaza el Google Form de la bio) -->
+<div class="pop" data-feria hidden role="dialog" aria-modal="true" aria-labelledby="f-t">
+  <div class="pop-caja">
+    <button type="button" class="pop-x" data-cerrar aria-label="Cerrar">×</button>
+    <form data-form-feria novalidate>
+      <p class="kicker">Feria Buna</p>
+      <h2 id="f-t">Sumá tu emprendimiento</h2>
+      <p class="pop-bajada">Te escribimos cuando armemos la próxima feria en el local.</p>
+      <label>Tu nombre<input name="nombre" autocomplete="name" required></label>
+      <label>Emprendimiento<input name="emp" required></label>
+      <label>Qué hacés<input name="rubro" placeholder="Cerámica, ropa, plantas…"></label>
+      <label>Instagram<input name="ig" placeholder="@tuemprendimiento" autocapitalize="off"></label>
+      <label>Teléfono<input name="tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <p class="pop-error" data-error hidden>Completá nombre, emprendimiento y teléfono.</p>
+      <button type="submit" class="btn-sumar btn-ancho">Quiero participar</button>
+    </form>
+    <div class="pop-ok" data-ok hidden>
+      <svg viewBox="580 334 280 418" aria-hidden="true"><use href="#grano"/></svg>
+      <p class="manuscrita">¡Listo!</p>
+      <p>Te escribimos para la próxima Feria Buna.</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script src="js/grano.js?v=2"></script>
+<script src="js/buna.js?v=14"></script>
+<script src="vendor/leaflet.js" defer></script>
+<script type="module">
+  import { initKit } from './kit/kit.js?v=1';
+  window.KIT = await initKit({ config: 'cliente.json', imagenes: false, carrito: { label: 'Tu pedido', fab: false } });
+  window.dispatchEvent(new Event('buna:kit'));
+</script>
+</body>
+</html>
