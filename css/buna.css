@@ -457,3 +457,5 @@ body{--kit-qty-h:44px}
 /* mientras el grano vuela, el vinilo de la ventana no se ve: aparece cuando el grano lo toca */
 html.vuela .hA-grano{opacity:0!important;transition:none!important}
 @media (min-width:900px){.locales{align-items:start}.mapa{height:min(calc(100svh - 180px),620px);min-height:440px}}
+/* mapa: OpenStreetMap llevado a la paleta de Buna (calles suaves, sin colores chillones) */
+.mapa .leaflet-tile-pane{filter:grayscale(.75) sepia(.12) hue-rotate(115deg) saturate(.9) brightness(1.04) contrast(.92)}

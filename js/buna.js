@@ -336,7 +336,7 @@
     if (mapaListo || !window.L) return; mapaListo = true;
     var el = $('[data-mapa]');
     var m = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true, dragging: !L.Browser.mobile, tap: false });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { maxZoom: 18, subdomains: 'abcd', attribution: '© OpenStreetMap · © CARTO' }).addTo(m);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(m);
     var icono = L.divIcon({ className: 'pin', html: '<svg viewBox="0 0 46 62" aria-hidden="true"><path d="M23 61C23 61 3 36 3 22a20 20 0 0 1 40 0c0 14-20 39-20 39z" fill="#2E6A5D"/><g transform="translate(13.5 8) scale(.068)" fill="#EEEDE9"><path transform="translate(-586 -340)" d="' + window.GRANO_D + '" fill-rule="evenodd"/></g></svg>', iconSize: [46, 62] });
     var b = [];
     Object.keys(SEDES).forEach(function (k) {
