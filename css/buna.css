@@ -459,3 +459,11 @@ html.vuela .hA-grano{opacity:0!important;transition:none!important}
 @media (min-width:900px){.locales{align-items:start}.mapa{height:min(calc(100svh - 180px),620px);min-height:440px}}
 /* mapa: OpenStreetMap llevado a la paleta de Buna (calles suaves, sin colores chillones) */
 .mapa .leaflet-tile-pane{filter:grayscale(.75) sepia(.12) hue-rotate(115deg) saturate(.9) brightness(1.04) contrast(.92)}
+/* la taza del décimo, siempre centrada en su círculo (desktop tiene .slot{display:block}) */
+.t-grilla .slot.slot-premio{display:grid;place-items:center}
+.t-grilla .slot-premio svg{width:56%;margin-top:-4%}
+/* el mural del barrio: mancha orgánica con los cuatro lados redondeados, no una ola cortada a los costados */
+.barrio-mural::before{border-radius:0;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M6 20 C 16 6, 30 3, 42 11 S 66 24, 79 9 S 99 7, 98 24 L 99 84 C 99 95, 93 99, 83 99 L 17 100 C 6 100, 1 94, 1 84 L 2 30 C 2 25, 3 23, 6 20Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M6 20 C 16 6, 30 3, 42 11 S 66 24, 79 9 S 99 7, 98 24 L 99 84 C 99 95, 93 99, 83 99 L 17 100 C 6 100, 1 94, 1 84 L 2 30 C 2 25, 3 23, 6 20Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+@media (max-width:899px){.t-ficha-sug{top:6px;font-size:17px}.t-info{padding-top:16px}}
